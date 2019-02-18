@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Login from '../atoms/login';
 // import httpRequest from '../../services/httpRequest';
 // import * as apiInfo from '../../services/apiurl';
+import { connect } from 'react-redux';
 class LoginForms extends Component {
 
     submitVal2 = (data) => {
@@ -22,4 +23,10 @@ class LoginForms extends Component {
         )
     }
 }
-export default LoginForms;
+
+let mapStoreToProps = (store) => {
+    return {
+        userList: store.postUserValueReducer.userList
+    }
+}
+export default connect(mapStoreToProps)(LoginForms);

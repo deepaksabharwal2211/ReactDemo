@@ -1,19 +1,14 @@
-import {ACTION_TYPES} from './'
+import { ACTION_TYPES } from './'
 const initialState = {
-
+    userList: []
 };
 
 const postUserValueReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case ACTION_TYPES.ADD_USER:
-           //localStorage.setItem('postUserValue', action.value);
-            return {
-                ...state,
-                'postUserValue': action.value
-            }
-        default:
-            return state;
+    let newState = { ...state }
+    if (action.type == 'GET_DATA') {
+        newState.userList = action.data
     }
+    return newState
 }
 
 export {

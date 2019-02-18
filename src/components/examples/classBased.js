@@ -25,7 +25,7 @@ class ClassBased extends Component {
                 <span>Age: <small>{this.props.age}</small></span>
                 <button onClick={this.props.AgeclickHandler}>AGE UP</button>
                 <button onClick={this.props.AgeclickHandlerDec}>AGE UP</button>
-
+                    
                 <hr />
                 <div>History</div>
                 <div>

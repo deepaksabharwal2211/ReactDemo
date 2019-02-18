@@ -7,7 +7,8 @@ import { Provider } from "react-redux";
 import store from './components/helpers/store';
 import Login from './components/atoms/login';
 import * as apiInfo from './components/services/apiUrl';
-import httpRequest from './components/services/httpRequest'
+import httpRequest from './components/services/httpRequest';
+
 class App extends Component {
   constructor() {
     super();
@@ -57,4 +58,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default (App);
